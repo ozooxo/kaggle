@@ -44,13 +44,13 @@ Therefore, for a proper designed hash function, the crashing of voting tables be
 The final pattern I am using is 29-bit. It is shown as below. The grids which have the same number will be count alive if any grid in it is alive (a.k.a OR operation).
 
 == == == == == == ==
-      01 01 01      
-   02 03 04 05 06   
+xx xx 01 01 01 xx xx
+xx 02 03 04 05 06 xx
 07 08 09 10 11 12 13
 07 14 15 16 17 18 13
 07 19 20 21 22 23 13
-   24 25 26 27 28   
-      29 29 29
+xx 24 25 26 27 28 xx
+xx xx 29 29 29 xx xx
 == == == == == == ==
 
 I didn't use any parallel computing algorithms to speed up my calculation. The final running time is roughly 2 days in my 300 USD desktop. The running file is ``conway_d-pattern-matching_combine37.c``, it has a public score of ``0.11488`` and a private score of ``0.11584``.
